@@ -1,0 +1,222 @@
+# Project information
+site_name: Coding Interview Note
+site_description: 📝 Solutions and notes of the problems on online judge platforms like LeetCode, Codility and HackerRank.
+site_author: Hsins
+site_url: https://hsins.github.io/OJ-Note/
+
+# Repository
+repo_name: Hsins/OJ-Note
+repo_url: https://github.com/Hsins/OJ-Note/
+edit_uri: edit/docs/docs/
+
+# Copyright
+copyright: Copyright &copy; 2022 H.-H. Peng
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+
+  static_templates:
+    - 404.html
+
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+  language: zh-Hant
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - content.code.annotate
+    - search.highlight
+    - search.suggest
+
+  palette:
+    # Light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: grey
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: red
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  icon:
+    repo: fontawesome/brands/github-square
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+  # Don't include Mkdocs JavaScript
+  include_search_page: false
+  search_index_only: true
+
+# Extras
+extra:
+  alternate:
+    - name: 繁體中文
+      link: ./
+      lang: zh-Hant
+    - name: English
+      link: ./en/
+      lang: en
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Hsins
+
+# Contents
+nav:
+  - 首頁: index.md
+  - 專案介紹:
+      - 關於本站: intro/index.md
+      - 風格規範: intro/styleguide.md
+      - 參考資料: intro/references.md
+  - 模板整理:
+      - 滑動窗口: patterns/sliding-window.md
+      - 雙向指針: patterns/two-pointers.md
+      - 快慢指針: patterns/fast-slow-pointers.md
+      - 合併區間: patterns/merge-intervals.md
+      - 循環排序: patterns/cyclic-sort.md
+      - In-place Reversal of Linked-List: patterns/in-place-reversal-of-linked-list.md
+      - 廣度優先搜索: patterns/breadth-first-search.md
+      - 深度優先搜索: patterns/depth-first-search.md
+      - Two Heaps: patterns/two-heaps.md
+      - Subsets: patterns/subsets.md
+      - 位元運算: patterns/bitwise-xor.md
+      - Top K Elements: patterns/top-k-elements.md
+      - K-way Merge: patterns/k-way-merge.md
+      - 背包問題: patterns/0-or-1-knapsack.md
+      - 拓墣排序: patterns/topological-sort.md
+  - LeetCode:
+      - 0013. 羅馬數字轉整數: leetcode/roman-to-integer.md
+      - 0021. 合併兩個有序鏈表: leetcode/merge-two-sorted-lists.md
+      - 0025. K 個一組翻轉鏈表: leetcode/reverse-nodes-in-k-group.md
+      - 0141. 環形鏈表: leetcode/linked-list-cycle.md
+      - 0142. 環形鏈表 II: leetcode/linked-list-cycle-ii.md
+      - 0143. 重排鏈表: leetcode/reorder-list.md
+      - 0160. 相交鏈表: leetcode/intersection-of-two-linked-lists.md
+      - 0202. 快樂數: leetcode/happy-number.md
+      - 0205. 同構字符串: leetcode/insomorphic-strings.md
+      - 0206. 反轉鏈表: leetcode/reverse-linked-list.md
+      - 0217. 存在重複元素: leetcode/contains-duplicate.md
+      - 0234. 回文鏈表: leetcode/palindrome-linked-list.md
+      - 0242. 有效的字母異位詞: leetcode/valid-anagram.md
+      - 0457. 環形數組是否存在循環: leetcode/circular-array-loop.md
+      - 0876. 鏈表的中間結點: leetcode/middle-of-the-linked-list.md
+
+# Plugins
+plugins:
+  - tags
+  - search:
+      lang:
+        - en
+        - ja
+  - minify:
+      minify_html: true
+  - i18n:
+      default_language: zh
+      languages:
+        zh: 繁體中文
+        en: English
+      nav_translations:
+        en:
+          # nav
+          首頁: Home
+          專案介紹: Intro
+          模板整理: Patterns
+          # intro
+          關於本站: About
+          風格規範: Style Guide
+          參考資料: References
+          # patterns
+          滑動窗口: Sliding Window
+          雙向指針: Two Pointers
+          快慢指針: Fast-slow Pointers
+          合併區間: Merge Intervals
+          循環排序: Cyclic Sort
+          廣度優先搜索: Breadth First Search
+          深度優先搜索: Depth First Search
+          位元運算: Bitwise XOR
+          背包問題: 0/1 Knapsack
+          拓墣排序: Topological Sort
+          # LeetCode problems
+          0013. 羅馬數字轉整數: 0013. Roman to Integer
+          0021. 合併兩個有序鏈表: 0021. Merge Two Sorted Lists
+          0025. K 個一組翻轉鏈表: 0025. Reverse Nodes in k-Group
+          0141. 環形鏈表: 0141. Linked List Cycle
+          0142. 環形鏈表: 0142. Linked List Cycle II
+          0143. 重排鏈表: 0143. Reorder List
+          0160. 相交鏈表: 0160. Intersection of Two Linked Lists
+          0202. 快樂數: 0202. Happy Number
+          0205. 同構字符串: 0205. Insomorphic Strings
+          0206. 反轉鏈表: 0206. Reverse Linked List
+          0234. 回文鏈表: 0234. Palindrome Linked List
+          0217. 存在重複元素: 0217. Contains Duplicate
+          0242. 有效的字母異位詞: 0242. Valid Anagram
+          0457. 環形數組是否存在循環: 0457. Circular Array Loop
+          0876. 鏈表的中間結點: 0876. Middle of the Linked List
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  # MathJax
+  - extra/js/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # Tables
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - extra/js/tables.js
+
+extra_css:
+  - extra/css/home.css
+  - extra/css/custom.css
